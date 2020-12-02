@@ -9,7 +9,7 @@ or alternatively,
 
 `python3 -m pip install pygame`
 
-## To lunch the game, run: `python star_walk`
+## To lunch the game, run: `python star_walk.py`
 
 ## Instructions
 
