@@ -13,6 +13,10 @@ def add_ball():
     balls_w.append(random.randint(5,120))
     print("Star added! ")
 
+def add_n_balls(n=1):
+    for i in range(n):
+        add_ball()
+
 def mass_add(l, v):
     for i in range(len(l)):
         l[i] += v
@@ -75,7 +79,10 @@ pan_down = False
 while True: 
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
-        elif event.type == pygame.MOUSEBUTTONDOWN: add_ball()
+        elif event.type == pygame.MOUSEBUTTONDOWN: 
+            if event.button == 1: add_ball() # left click
+            elif event.button == 2: add_n_balls(3)# middle mouse click
+            elif event.button == 3: add_n_balls(5)# right click
         elif event.type == pygame.KEYDOWN:
             # 72 is down, 80 is up
             # A-30, W-17, S-31, P-32
